@@ -53,8 +53,8 @@ $("projectGrid").innerHTML = projects.map(p => `
   </article>`).join("");
 
 /* ========== SUPABASE (isi 2 nilai ini, lihat panduan) ========== */
-const SUPABASE_URL = "https://XXXX.supabase.co";   // Project URL
-const SUPABASE_KEY = "ISI_ANON_PUBLIC_KEY";        // anon / publishable key
+const SUPABASE_URL = "https://nnyiszwtrpjglljrhorv.supabase.co";   // Project URL
+const SUPABASE_KEY = "sb_publishable_QRgFEksqS0iV82KjOAShzg_XClG5IHh";        // anon / publishable key
 const BUCKET = "tugas";
 
 let sb = null, isOwner = false;
