@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Laurazia Hana | Portofolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- NAVIGASI -->
+  <header class="nav">
+    <a href="#home" class="logo">Laurazia<span>.dev</span></a>
+    <button class="menu-btn" id="menuBtn" aria-label="Buka menu">☰</button>
+    <nav id="menu">
+      <a href="#home">Home</a><a href="#about">About</a><a href="#portfolio">Portfolio</a>
+      <a href="#assignment">Tugas</a><a href="#contact">Contact</a>
+      <button id="themeBtn" aria-label="Ganti tema">🌓</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- HOME -->
+    <section id="home" class="hero reveal">
+      <div class="hero-text">
+        <p class="badge">🟢 Terbuka untuk diskusi</p>
+        <p>Halo, saya</p>
+        <h1>Laurazia Hana</h1>
+        <h3>Mahasiswa Teknik Informatika</h3>
+        <p>Saya tertarik pada teknologi, desain grafis, dan pemrograman, terutama Python, jaringan, dan Adobe Photoshop. Website ini berisi profil, proyek, dan kumpulan tugas kuliah saya.</p>
+        <div class="btns">
+          <a href="#portfolio" class="btn primary">Lihat Portofolio</a>
+          <a href="#assignment" class="btn">Lihat Tugas</a>
+        </div>
+      </div>
+      <!-- Ganti foto.jpg dengan fotomu; jika tidak ada, tampil inisial -->
+      <img src="foto.jpg" alt="Foto profil" class="avatar" onerror="this.outerHTML='<div class=&quot;avatar ph&quot;>LH</div>'">
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="reveal">
+      <h2>About Me</h2>
+      <div class="grid">
+        <div class="card"><h3>Biodata</h3>
+          <p><b>Nama:</b> Laurazia Hana</p><p><b>Kampus:</b> Universitas Budi Luhur</p>
+          <p><b>Prodi:</b> Teknik Informatika</p><p><b>Domisili:</b> Tangerang</p></div>
+        <div class="card"><h3>Pendidikan</h3>
+          <p><b>Universitas Budi Luhur</b><br>S1 Teknik Informatika</p>
+          <p><b>SMA Yadika 6</b></p></div>
+        <div class="card"><h3>Minat &amp; Kemampuan</h3>
+          <div class="tags"><span>Adobe Photoshop</span><span>Python</span><span>Jaringan</span></div></div>
+      </div>
+    </section>
+
+    <!-- PORTFOLIO (data di script.js) -->
+    <section id="portfolio" class="reveal">
+      <h2>Portfolio</h2>
+      <div class="grid" id="projectGrid"></div>
+    </section>
+
+    <!-- ASSIGNMENT -->
+    <section id="assignment" class="reveal">
+      <h2>Pengumpulan Tugas</h2>
+      <p class="note" id="note">Pengunjung bisa melihat &amp; mengunduh tugas. Upload dan hapus hanya untuk pemilik (login).</p>
+      <div class="drive">
+        <aside>
+          <h4>Mata Kuliah</h4>
+          <ul id="courseList"></ul>
+        </aside>
+        <div class="files">
+          <div class="toolbar">
+            <input type="search" id="search" placeholder="Cari nama file…">
+            <input type="file" id="fileInput" hidden multiple accept=".pdf,.docx,.pptx,.xlsx,.zip,.jpg,.jpeg,.png">
+            <button class="btn primary" id="uploadBtn" hidden>⬆ Upload File</button>
+            <button class="btn" id="loginBtn">🔒 Login Pemilik</button>
+          </div>
+          <form id="loginForm" class="toolbar" hidden>
+            <input id="lEmail" type="email" placeholder="Email pemilik" required>
+            <input id="lPass" type="password" placeholder="Password" required>
+            <button class="btn primary" type="submit">Masuk</button>
+          </form>
+          <p id="courseTitle" class="course-title"></p>
+          <div class="table-wrap">
+            <table>
+              <thead><tr><th>Nama File</th><th>Mata Kuliah</th><th>Tanggal</th><th>Status</th><th>Aksi</th></tr></thead>
+              <tbody id="fileBody"></tbody>
+            </table>
+          </div>
+          <p id="empty" class="empty" hidden>Belum ada file.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="reveal">
+      <h2>Contact</h2>
+      <div class="grid">
+        <div class="card">
+          <p>📧 <a href="mailto:laur4.z.h@gmail.com">laur4.z.h@gmail.com</a></p>
+          <p>💻 <a href="https://github.com/laur4zh-del" target="_blank" rel="noopener">github.com/laur4zh-del</a></p>
+          <p>📸 <a href="https://instagram.com/laurrazia" target="_blank" rel="noopener">@laurrazia</a></p>
+        </div>
+        <form class="card" id="contactForm">
+          <input id="cName" placeholder="Nama" required>
+          <input id="cEmail" type="email" placeholder="Email" required>
+          <textarea id="cMsg" rows="4" placeholder="Pesan" required></textarea>
+          <button class="btn primary" type="submit">Kirim Pesan</button>
+        </form>
+      </div>
+    </section>
+  </main>
+  <footer>© <span id="year"></span> Laurazia Hana</footer>
+  <div id="toast" class="toast"></div>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
