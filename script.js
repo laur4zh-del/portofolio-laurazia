@@ -7,7 +7,7 @@ const projects = [
 ];
 const courses = ["Trend Teknologi Informasi"];
 const STATUSES = ["Draf","Terkumpul","Direvisi","Dinilai"];
-const ALLOWED = ["pdf","docx","pptx","xlsx","zip","jpg","jpeg","png"];
+const ALLOWED = ["pdf","doc","docx","ppt","pptx","xls","xlsx","zip","jpg","jpeg","png"];
 const MAX_MB = 50;
 
 const $ = id => document.getElementById(id);
